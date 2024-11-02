@@ -25,11 +25,11 @@ function App() {
         <Basket />
         <Routes>
           <Route path="/Giftos" element={<Home />}/>
-          <Route path="/shop" element={<Shop />}/>
-          <Route path="/all-products" element={<AllProducts />}/>
-          <Route path="/product/:productId" element={<ViewProduct />}/>
-          <Route path="/why-us" element={<WhyShopPage />}/>
-          <Route path="/contact-us" element={<Contact />}/>
+          <Route path="/Giftos/shop" element={<Shop />}/>
+          <Route path="/Giftos/all-products" element={<AllProducts />}/>
+          <Route path="/Giftos/product/:productId" element={<ViewProduct />}/>
+          <Route path="/Giftos/why-us" element={<WhyShopPage />}/>
+          <Route path="/Giftos/contact-us" element={<Contact />}/>
         </Routes>
       </BasketContext.Provider>
       <Footer />

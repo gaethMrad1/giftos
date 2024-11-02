@@ -16,13 +16,13 @@ function Header() {
                     <NavLink to="/Giftos" className="nav-link" aria-current="page">HOME</NavLink>
                     </li>
                     <li className="nav-item">
-                    <NavLink to="/shop" className="nav-link">SHOP</NavLink>
+                    <NavLink to="/Giftos/shop" className="nav-link">SHOP</NavLink>
                     </li>
                     <li className="nav-item">
-                    <NavLink to="/why-us" className="nav-link">WHY US</NavLink>
+                    <NavLink to="/Giftos/why-us" className="nav-link">WHY US</NavLink>
                     </li>
                     <li className="nav-item">
-                    <NavLink to="/contact-us" className="nav-link">CONTACT US</NavLink>
+                    <NavLink to="/Giftos/contact-us" className="nav-link">CONTACT US</NavLink>
                     </li>
                 </ul>
                 </div>
