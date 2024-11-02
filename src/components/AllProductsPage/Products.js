@@ -25,7 +25,7 @@ function Products() {
                         <span>Price: <span>{product.price}$</span></span>
                     </div>
                     <AddProductButton price={product.price}/>
-                    <Link to={`/Giftos/product/${product.id}`} className="btn view">View Product</Link>
+                    <Link to={`/product/${product.id}`} className="btn view">View Product</Link>
                 </div>
             )
         })}
