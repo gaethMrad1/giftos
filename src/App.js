@@ -24,7 +24,7 @@ function App() {
       <BasketContext.Provider value={values}>
         <Basket />
         <Routes>
-          <Route path="/" element={<Home />}/>
+          <Route path="/Giftos" element={<Home />}/>
           <Route path="/shop" element={<Shop />}/>
           <Route path="/all-products" element={<AllProducts />}/>
           <Route path="/product/:productId" element={<ViewProduct />}/>
