@@ -1,23 +1,38 @@
-import logo from './logo.svg';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Header from './components/Header/Header';
+import Home from './pages/Home';
+import Footer from './components/Footer/Footer';
+import Shop from './pages/Shop';
+import WhyShopPage from './pages/WhyShopPage';
+import Contact from './pages/Contact';
+import AllProducts from './pages/AllProducts';
+import ViewProduct from './pages/ViewProduct';
+import Basket from './components/Basket/Basket';
+import { BasketContext } from './context/BasketContext';
+import { useState } from 'react';
 
 function App() {
+  const [total, setTotal] = useState(0);
+  const [price, setPrice] = useState(0);
+
+  const values = {total, setTotal, price, setPrice};
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <BasketContext.Provider value={values}>
+        <Basket />
+        <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/shop" element={<Shop />}/>
+          <Route path="/all-products" element={<AllProducts />}/>
+          <Route path="/product/:productId" element={<ViewProduct />}/>
+          <Route path="/why-us" element={<WhyShopPage />}/>
+          <Route path="/contact-us" element={<Contact />}/>
+        </Routes>
+      </BasketContext.Provider>
+      <Footer />
     </div>
   );
 }

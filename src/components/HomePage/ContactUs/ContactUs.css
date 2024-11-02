@@ -1,0 +1,47 @@
+.contact-us {
+    margin-top: 50px;
+}
+.contact-us .title {
+    width: fit-content;
+    margin: 0 auto;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.contact-us form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 45px 20px;
+    box-shadow: 1px 1px 10px #777;
+}
+.contact-us form input {
+    border: 1px solid #919191;
+    height: 50px;
+    width: 50%;
+    padding-left: 25px
+}
+@media(max-width: 576px) {
+    .contact-us form input {
+        width: 100%;
+    }
+}
+.contact-us form .message {
+    height: 120px;
+}
+.contact-us form button {
+    padding: 12px 45px;
+    background-color: #db4f66;
+    color: #ffffff;
+    border: 1px solid #db4f66;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    display: block;
+    color: #fff;
+}
+.contact-us form button:hover {
+    background-color: transparent;
+    border: 1px solid #db4f66;
+    color: #db4f66;
+}

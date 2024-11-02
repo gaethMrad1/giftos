@@ -1,0 +1,32 @@
+.why-shop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+.why-shop .title {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.why-shop .cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.why-shop .cards .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f8f7;
+    padding: 25px;
+    border-radius: 5px;
+    text-align: center;
+}
+.why-shop .cards .card i {
+    color: #320b57;
+    font-size: 55px;
+    margin-bottom: 30px;
+}

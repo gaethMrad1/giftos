@@ -1,0 +1,90 @@
+footer {
+    margin-top: 50px;
+}
+footer .container {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    padding: 45px 50px 0;
+}
+footer .container .icons {
+    width: fit-content;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    gap: 20px;
+    color: white;
+    margin-bottom: 25px;
+}
+footer .container .info {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+@media(max-width: 768px) {
+    footer .container .info div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+footer .container .info .box h5 {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+footer .container .info .box p {
+    color: #cbc9c9;
+}
+footer .container .info .email h5 {
+    margin-bottom: 10px;
+}
+footer .container .info .email form input {
+    width: 100%;
+    padding: 7px 10px;
+}
+footer .container .info .email form button {
+    padding: 8px 35px;
+    outline: none;
+    border: none;
+    color: #ffffff;
+    background: #f89cab;
+    margin-top: 15px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+footer .container .info .email form button:hover {
+    background-color: transparent;
+    color: #f89cab;
+    border: 1px solid #f89cab;
+}
+footer .container .info .contact h5 {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+footer .container .info .contact div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+footer .container .info .contact div span {
+    color: #cbc9c9;
+}
+footer .container .copy-right {
+    padding: 25px;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid white;
+    margin-top: 30px;
+    text-align: center;
+}
+@media(max-width: 768px) {
+    footer .container .copy-right {
+        width: 100%;
+    }
+}

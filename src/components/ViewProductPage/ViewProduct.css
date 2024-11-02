@@ -1,0 +1,23 @@
+.view-product {
+    margin-top: 50px;
+}
+.view-product .container .title {
+    width: fit-content;
+    margin: 0 auto;
+}
+@media(max-width: 576px) {
+    .view-product .container .title {
+        text-align: center;
+    }
+}
+.view-product .container .product img {
+    max-width: 300px;
+    display: block;
+    margin: 0 auto;
+}
+.view-product .container .product span {
+    margin-bottom: 1rem;
+}
+.view-product .container .product .price span {
+    color: #f16179;
+}
