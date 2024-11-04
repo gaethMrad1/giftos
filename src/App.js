@@ -1,16 +1,10 @@
-import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/Header';
-import Home from './pages/Home';
 import Footer from './components/Footer/Footer';
-import Shop from './pages/Shop';
-import WhyShopPage from './pages/WhyShopPage';
-import Contact from './pages/Contact';
-import AllProducts from './pages/AllProducts';
-import ViewProduct from './pages/ViewProduct';
 import Basket from './components/Basket/Basket';
 import { BasketContext } from './context/BasketContext';
 import { useState } from 'react';
+import { Outlet } from 'react-router-dom';
 
 function App() {
   const [total, setTotal] = useState(0);
@@ -22,15 +16,8 @@ function App() {
     <div className="App">
       <Header />
       <BasketContext.Provider value={values}>
-          <Basket />
-          <Routes>
-            <Route path="/Giftos" element={<Home />}/>
-            <Route path="/shop" element={<Shop />}/>
-            <Route path="/all-products" element={<AllProducts />}/>
-            <Route path="/product/:productId" element={<ViewProduct />}/>
-            <Route path="/why-us" element={<WhyShopPage />}/>
-            <Route path="/contact-us" element={<Contact />}/>
-          </Routes>
+        <Basket />
+        <Outlet />
       </BasketContext.Provider>
       <Footer />
     </div>
