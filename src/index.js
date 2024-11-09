@@ -8,7 +8,6 @@ import WhyShopPage from './pages/WhyShopPage';
 import Contact from './pages/Contact';
 import AllProducts from './pages/AllProducts';
 import ViewProduct from './pages/ViewProduct';
-import NotFound from './pages/NotFound';
 
 const router = createBrowserRouter([
   {
@@ -21,7 +20,6 @@ const router = createBrowserRouter([
       {path: "contact-us", element: <Contact />},
       {path: "all-products", element: <AllProducts />},
       {path: "product/:productId", element: <ViewProduct />},
-      {path: "*", element: <NotFound />}
     ]
   }
 ])
