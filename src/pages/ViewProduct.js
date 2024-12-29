@@ -11,6 +11,7 @@ function ViewProduct() {
     fetch(`https://fakestoreapi.in/api/products/${productId}`)
     .then(response => response.json())
     .then(data => setProduct(data.product))
+    .catch((error) => { throw new Error(error) })
   }, [productId])
 
   return (

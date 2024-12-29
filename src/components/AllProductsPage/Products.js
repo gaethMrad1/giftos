@@ -10,15 +10,16 @@ function Products() {
     fetch("https://fakestoreapi.in/api/products")
     .then(response => response.json())
     .then(data => setProducts(data.products))
+    .catch((error) => { throw new Error(error) })
   }, [])
 
   return (
     <div className="all-products">
         <h2 className="title">All Products</h2>
         <div className="products">
-        {products.map((product) => {
+        {products.map((product, index) => {
             return (
-                <div className="product">
+                <div key={index} className="product">
                     <img src={product.image} alt={product.title}/>
                     <div className="info">
                         <span>Brand: {product.brand}</span>

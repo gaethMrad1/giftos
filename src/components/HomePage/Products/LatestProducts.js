@@ -10,15 +10,16 @@ function LatestProducts() {
     fetch("https://fakestoreapi.in/api/products")
     .then(response => response.json())
     .then(data => setProducts(data.products))
+    .catch((error) => { throw new Error(error) })
   }, [])
 
   return (
     <div className="latest-products">
         <h2 className="title">Latest Products</h2>
         <div className="products">
-        {products.map((product) => {
-            return +product.id >= 9 ? null : (
-              <div className="product">
+        {products.map((product, index) => {
+            return +product.id <= 8 && (
+              <div key={index} className="product">
                 <img src={product.image} alt={product.title}/>
                 <div className="info">
                   <span>Brand: {product.brand}</span>

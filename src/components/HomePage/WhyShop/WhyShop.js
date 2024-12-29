@@ -12,8 +12,8 @@ function WhyShop() {
     <div className="why-shop">
         <h2 className="title">Why Shop With Us</h2>
         <div className="cards">
-            {data.map((ele) => {
-                return <Card iconClass={ele.iconClass} title={ele.title} desc={ele.desc}/>
+            {data.map((ele, index) => {
+                return <Card key={index} iconClass={ele.iconClass} title={ele.title} desc={ele.desc}/>
             })}
         </div>
     </div>
